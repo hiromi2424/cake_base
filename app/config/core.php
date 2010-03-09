@@ -52,6 +52,11 @@ date_default_timezone_set('Asia/Tokyo');
 	Configure::write('log', true);
 
 /**
+ * Application name
+ */
+	Configure::write('App.name', 'Web Application');
+
+/**
  * Application wide charset encoding
  */
 	Configure::write('App.encoding', 'UTF-8');
