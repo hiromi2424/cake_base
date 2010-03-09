@@ -39,7 +39,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link(__(Confgure::read('App.name'), true), '/'); ?></h1>
+			<h1><?php echo $this->Html->link(__(Configure::read('App.name'), true), '/'); ?></h1>
 		</div>
 		<div id="content">
 
