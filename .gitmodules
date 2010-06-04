@@ -1,0 +1,3 @@
+[submodule "plugins/hack"]
+	path = plugins/hack
+	url = git://github.com/hiromi2424/hack_plugin.git
