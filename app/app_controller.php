@@ -1,13 +1,13 @@
 <?php
-class AppController extends Controller{
-	var $helpers = array('Form','JpForm','Time','Session','Number');
-	var $components = array('Transition','Session','Qdmail','Qdsmtp','Cookie');
+class AppController extends Controller {
+	var $helpers = array('Form', 'JpForm', 'Time', 'Session', 'Number');
+	var $components = array('Transition', 'Session', 'Qdmail', 'Qdsmtp', 'Cookie');
 	
-	function beforeFilter(){
+	function beforeFilter() {
 		return parent::beforeFilter();
 	}
 	
-	function beforeRender(){
+	function beforeRender() {
 		return parent::beforeRender();
 	}
 	
@@ -18,12 +18,12 @@ class AppController extends Controller{
 		return $this->redirect($args);
 	}
 	
-	function forbidden(){
-		return $this->redirect(null,403);
+	function forbidden() {
+		return $this->redirect(null, 403);
 	}
 	
-	function notFound(){
-		return $this->redirect(null,404);
+	function notFound() {
+		return $this->redirect(null, 404);
 	}
 	
 	function _mail($data){
@@ -43,15 +43,15 @@ class AppController extends Controller{
 		
 		list($element,$data) = each($data);
 		$mail->to($data['email']);
-		$mail->subject(__($element,true));
-		$mail->cakeText(compact('data'),$element);
+		$mail->subject(__($element, true));
+		$mail->cakeText(compact('data'), $element);
 		
 		return $mail->send();
 	}
 	
-	function debug(){
+	function debug() {
 		$args = func_get_args();
-		return call_user_func_array('__debug',$args);
+		return call_user_func_array('__debug', $args);
 	}
 }
 
